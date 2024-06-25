@@ -1,0 +1,5 @@
+[Added Associations]
+video/x-matroska=vlc-3.desktop;vlc-2.desktop;
+
+[Default Applications]
+video/x-matroska=vlc-3.desktop;

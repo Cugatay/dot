@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 # set window_path (find  ~/personal ~/work ~/.config -mindepth 1 -maxdepth 2 -type d | fzf)
-set window_path (find  ~/personal ~/work ~/.config -mindepth 1 -maxdepth 1 -type d | fzf)
+set window_path (find  ~/personal ~/work ~/dotfiles/.config -mindepth 1 -maxdepth 1 -type d | fzf)
 set window_name (basename "$window_path" | tr . _)
 
 if test -n "$window_path"

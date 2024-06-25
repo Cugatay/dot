@@ -22,4 +22,22 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-fonts-to-copy
+.fonts-to-copy
+
+.config/Slack
+.config/github-copilot
+.config/dconf
+.config/go
+# gtk-3.0
+.config/kde.org
+.config/pulse
+.config/session
+.config/vlc
+.config/QtProject.conf
+.config/baloofileinformationrc
+.config/dolphinrc
+.config/filetypesrc
+.config/pavucontrol.ini
+.config/trashrc
+.config/obsidian
+.config/obs-studio
