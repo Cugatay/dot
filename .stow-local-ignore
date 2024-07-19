@@ -22,7 +22,7 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-.fonts-to-copy
+fonts-to-copy
 
 .config/Slack
 .config/github-copilot

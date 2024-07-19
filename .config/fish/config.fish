@@ -49,34 +49,12 @@ if status is-interactive
 
   end
 
-
-	# set -gx EDITOR nvim
-
 	# System Bin
 	# fish_add_path /usr/local/bin
 	# fish_add_path /usr/bin
 	# fish_add_path /bin
 	# fish_add_path /usr/sbin
 	# fish_add_path /sbin
-
-	# Homebrew
-	# fish_add_path /opt/homebrew/bin
-
-	# Rust
-	# fish_add_path $HOME/.cargo/bin
-
-	# Yarn
-	# fish_add_path $HOME/.yarn/bin
-	# fish_add_path $HOME/.config/yarn/global/node_modules/.bin
-
-	# Deno
-	# fish_add_path /Users/cagataykaydir/.deno/bin
-
-	# pnpm
-	# fish_add_path /Users/cagataykaydir/Library/pnpm
-
-	# Golang
-	# fish_add_path /usr/local/go/bin
 end
 
 # source /Users/cagataykaydir/.docker/init-fish.sh || true # Added by Docker Desktop
@@ -86,16 +64,16 @@ end
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
 
 # pnpm
-set -gx PNPM_HOME "/Users/cagataykaydir/Library/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-fish_add_path $BUN_INSTALL/bin
+# set -gx PNPM_HOME "/Users/cagataykaydir/Library/pnpm"
+# set -gx PATH "$PNPM_HOME" $PATH
+#
+# # bun
+# set --export BUN_INSTALL "$HOME/.bun"
+# fish_add_path $BUN_INSTALL/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /Users/cagataykaydir/anaconda3/bin/conda
-    eval /Users/cagataykaydir/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-end
+# if test -f /Users/cagataykaydir/anaconda3/bin/conda
+#     eval /Users/cagataykaydir/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# end
 # <<< conda initialize <<<
