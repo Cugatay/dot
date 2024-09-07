@@ -34,15 +34,24 @@ require('lazy').setup({
   -- 'Cugatay/nvim-cmp'                -- Real version: hrsh7th/nvim-cmp, yioneko's: yioneko/nvim-cmp
   -- 'yioneko/nvim-cmp'
   'hrsh7th/nvim-cmp',
-  'hrsh7th/cmp-nvim-lsp',                          -- nvim-cmp source for neovim's built-in LSP
-  "L3MON4D3/LuaSnip",                              -- Snippet engine requirement
-  'hrsh7th/cmp-buffer',                            -- Buffer source for cmp
-  'saadparwaiz1/cmp_luasnip',                      -- Snippet source
-  'rafamadriz/friendly-snippets',                  -- Pre-configured vscode-like snippets
-  'onsails/lspkind.nvim',                          -- VSCode-like Pictograms
-  'jose-elias-alvarez/null-ls.nvim', -- Formatter
-  { 'j-hui/fidget.nvim' },                         -- LSP Updates UI
+  'hrsh7th/cmp-nvim-lsp',                                   -- nvim-cmp source for neovim's built-in LSP
+  "L3MON4D3/LuaSnip",                                       -- Snippet engine requirement
+  'hrsh7th/cmp-buffer',                                     -- Buffer source for cmp
+  'saadparwaiz1/cmp_luasnip',                               -- Snippet source
+  'rafamadriz/friendly-snippets',                           -- Pre-configured vscode-like snippets
+  'onsails/lspkind.nvim',                                   -- VSCode-like Pictograms
+  'jose-elias-alvarez/null-ls.nvim',                        -- Formatter
+  { 'j-hui/fidget.nvim' },                                  -- LSP Updates UI
   { "jinzhongjia/LspUI.nvim",          branch = 'legacy' }, -- Better UI
+  -- {
+  --   "MysticalDevil/inlay-hints.nvim",
+  --   event = "LspAttach",
+  --   dependencies = { "neovim/nvim-lspconfig" },
+  --   config = function()
+  --     require("inlay-hints").setup()
+  --   end
+  -- },
+
   -- { "jinzhongjia/LspUI.nvim" },      -- Better UI
   -- { 'folke/trouble.nvim','legacy'  config = function()
   --   require("trouble").setup()
@@ -65,7 +74,7 @@ require('lazy').setup({
   -- 'folke/flash.nvim',
   -- 'mbbill/undotree'                             -- Undotree
   'cbochs/grapple.nvim', -- File Workflow
-  'github/copilot.vim',
+  -- 'github/copilot.vim',
 
   -- { 'RishabhRD/nvim-cheat.sh', requires = { 'RishabhRD/popfix' } }
 

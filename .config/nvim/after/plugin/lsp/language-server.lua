@@ -1,10 +1,11 @@
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- local ih = require("inlay-hints")
-
 local lsp_attach = function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
-  -- ih.on_attach(client, bufnr)
+
+  if client.supports_method("textDocument/inlayHint") or client.server_capabilities.inlayHintProvider then
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+  end
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts) -- Fo colemak
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -40,6 +41,11 @@ require('mason-lspconfig').setup_handlers({
   end,
 })
 
+lspconfig.zls.setup {
+  on_attach = lsp_attach,
+  capabilities = lsp_capabilities,
+}
+
 lspconfig.rust_analyzer.setup {
   on_attach = lsp_attach,
   capabilities = lsp_capabilities,
@@ -53,6 +59,8 @@ lspconfig.rust_analyzer.setup {
 }
 
 lspconfig.lua_ls.setup {
+  on_attach = lsp_attach,
+  capabilities = lsp_capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -61,15 +69,13 @@ lspconfig.lua_ls.setup {
       },
     },
   },
-  on_attach = lsp_attach,
-  capabilities = lsp_capabilities,
 }
 
 lspconfig.tsserver.setup {
-  root_dir = lspconfig.util.root_pattern("package.json"),
-  single_file_support = false,
   on_attach = lsp_attach,
   capabilities = lsp_capabilities,
+  root_dir = lspconfig.util.root_pattern("package.json"),
+  single_file_support = false,
 }
 
 -- lspconfig.gleam.setup {

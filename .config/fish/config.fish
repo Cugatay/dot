@@ -49,6 +49,9 @@ if status is-interactive
 
   end
 
+  # Binaries
+  fish_add_path ~/.cargo/bin
+
 	# System Bin
 	# fish_add_path /usr/local/bin
 	# fish_add_path /usr/bin
@@ -77,3 +80,7 @@ end
 #     eval /Users/cagataykaydir/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # end
 # <<< conda initialize <<<
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

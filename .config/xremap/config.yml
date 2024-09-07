@@ -1,0 +1,20 @@
+# # Modmap is for remapping key-to-key
+# modmap:
+#   - name: Global Modmap
+#     remap:
+#       CapsLock: Reserved
+# # Keymap is for remapping key sequences to a function or a key
+keymap:
+  - name: Browsers
+    application:
+      only: Slack
+    remap:
+      # M-n: C-n
+      SUPER-n: C-n
+      SUPER-t: C-t
+      SUPER-r: C-r
+      SUPER-w: C-w
+      SUPER-Shift-N: Ctrl-Shift-p
+      # Ctrl-Shift-p: left
+      # C-p: up
+      # C-n: down
