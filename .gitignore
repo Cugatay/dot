@@ -1,0 +1,14 @@
+/*
+!alacritty/
+!fish/
+!nvim/
+!omf/
+!tmux/
+!aerospace/
+!karabiner/
+!sketchybar/
+!skhd
+!yabai
+!wezterm
+!.gitignore
+*.secret
